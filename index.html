@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Node.js Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Node.js®</div>
+    <nav>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <ul id="nav-list">
+        <li><a href="#">Learn</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Download</a></li>
+        <li><a href="#">Docs</a></li>
+        <li><a href="#">Contribute</a></li>
+        <li><a href="#">Certification</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro fade-in">
+      <p class="survey">📣 Next-10 Survey → We need your feedback to help shape Node.js</p>
+      <h1>Run JavaScript Everywhere</h1>
+      <p>
+        Node.js® is an open-source, cross-platform JavaScript runtime environment that lets
+        developers build scalable network applications.
+      </p>
+      <a href="#" class="btn-download">⬇ Download Node.js (LTS)</a>
+      <small>Latest LTS Version: v22.15.0</small>
+    </section>
+
+    <section class="code-section slide-in">
+      <div class="code-header">Create an HTTP Server</div>
+      <pre class="code-block">
+<code>
+// server.mjs
+import { createServer } from 'node:http';
+
+const server = createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Hello World!\\n');
+});
+
+server.listen(3000, '127.0.0.1', () => {
+  console.log('Listening on 127.0.0.1:3000');
+});
+</code>
+      </pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>© OpenJS Foundation. Demo by Knoph O. Ayieko.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
